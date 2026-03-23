@@ -7,6 +7,11 @@ import { AppLayout } from '@/components/layout/AppLayout'
 import Auth from '@/pages/Auth'
 import Dashboard from '@/pages/Dashboard'
 import Roteiros from '@/pages/Roteiros'
+import Chat from '@/pages/Chat'
+import Imagens from '@/pages/Imagens'
+import FluiMKT from '@/pages/FluiMKT'
+import Academia from '@/pages/Academia'
+import Configuracoes from '@/pages/Configuracoes'
 import ComingSoon from '@/pages/ComingSoon'
 
 const queryClient = new QueryClient({
@@ -26,15 +31,15 @@ export default function App() {
               <Route element={<AppLayout />}>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/roteiros" element={<Roteiros />} />
-                <Route path="/chat" element={<ComingSoon title="FluiChat — IA Especializada" />} />
-                <Route path="/imagens" element={<ComingSoon title="Geração de Imagens" />} />
-                <Route path="/mkt" element={<ComingSoon title="FluiMKT — Diagnóstico" />} />
-                <Route path="/academia" element={<ComingSoon title="Academia Fluida" />} />
+                <Route path="/chat" element={<Chat />} />
+                <Route path="/imagens" element={<Imagens />} />
+                <Route path="/mkt" element={<FluiMKT />} />
+                <Route path="/academia" element={<Academia />} />
                 <Route path="/assets" element={<ComingSoon title="Biblioteca de Assets" />} />
                 <Route path="/marketplace" element={<ComingSoon title="Marketplace" />} />
                 <Route path="/analytics" element={<ComingSoon title="Analytics" />} />
                 <Route path="/conquistas" element={<ComingSoon title="Conquistas" />} />
-                <Route path="/configuracoes" element={<ComingSoon title="Configurações" />} />
+                <Route path="/configuracoes" element={<Configuracoes />} />
                 <Route path="/admin" element={<ComingSoon title="Painel Admin" />} />
               </Route>
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
